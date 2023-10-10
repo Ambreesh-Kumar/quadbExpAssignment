@@ -1,0 +1,61 @@
+POST http://localhost:4000/users/
+Content-Type: application/json
+
+{
+    "name": "Ambreesh",
+    "username": "ambreesh123",
+    "password": "ambreesh@#21",
+    "gender": "Male",
+    "location": "Hyderabad"
+}
+###
+
+POST http://localhost:4000/login/
+Content-Type: application/json
+
+{
+    "username": "ambreesh123",
+    "password": "ambreesh@#21"
+}
+###
+GET http://localhost:4000/details/3/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtYnJlZXNoMTIzIiwiaWF0IjoxNjk2OTA0Mzg2fQ.PjvXuBW_qL5kWEgAb7eRuch91JMWEwBnvWV39ftLPMQ
+###
+POST http://localhost:4000/insert
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtYnJlZXNoMTIzIiwiaWF0IjoxNjk2OTA0Mzg2fQ.PjvXuBW_qL5kWEgAb7eRuch91JMWEwBnvWV39ftLPMQ
+
+{
+    "user_name": "new_user_username",
+    "user_email": "new_user_email@example.com",
+    "user_password": "new_user_password",
+    "user_image": "new_user_image.jpg",
+    "total_orders": 0, 
+    "created_at": "2023-10-21T12:00:00Z",  
+    "last_logged_in": "2023-10-21T12:00:00Z" 
+}
+###
+
+PUT http://localhost:4000/update/4/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtYnJlZXNoMTIzIiwiaWF0IjoxNjk2OTA0Mzg2fQ.PjvXuBW_qL5kWEgAb7eRuch91JMWEwBnvWV39ftLPMQ
+
+{
+  "user_name": "Updated Name",
+  "user_email": "updated_email@example.com",
+  "user_password": "updated_password",
+  "user_image": "updated_image.jpg",
+  "total_orders": 10,
+  "created_at": "2023-10-22T12:00:00Z",
+  "last_logged_in": "2023-10-22T12:00:00Z"
+}
+
+###
+
+GET http://localhost:4000/image/3/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtYnJlZXNoMTIzIiwiaWF0IjoxNjk2OTA0Mzg2fQ.PjvXuBW_qL5kWEgAb7eRuch91JMWEwBnvWV39ftLPMQ
+###
+
+DELETE http://localhost:4000/delete/4/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtYnJlZXNoMTIzIiwiaWF0IjoxNjk2OTA0Mzg2fQ.PjvXuBW_qL5kWEgAb7eRuch91JMWEwBnvWV39ftLPMQ
+###
